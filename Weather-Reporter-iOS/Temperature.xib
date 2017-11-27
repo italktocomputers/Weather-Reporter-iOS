@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9060" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view alpha="0.89999999999999991" contentMode="scaleToFill" id="iN0-l3-epB" customClass="TemperatureView" customModule="Weather_Reporter_iOS" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Wba-xA-4Lb">
+                    <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
+                    <animations/>
+                    <textAttributes key="titleTextAttributes">
+                        <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="20"/>
+                    </textAttributes>
+                    <items>
+                        <navigationItem title="REPORT DETAILS" id="ppb-SD-bI5">
+                            <barButtonItem key="rightBarButtonItem" image="glyphicons-198-remove.png" id="Kaz-7V-OAa">
+                                <connections>
+                                    <action selector="closeDialog:" destination="iN0-l3-epB" id="V3w-Z2-aRZ"/>
+                                </connections>
+                            </barButtonItem>
+                        </navigationItem>
+                    </items>
+                </navigationBar>
+                <pickerView contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3hT-UB-HjS">
+                    <rect key="frame" x="232" y="85" width="152" height="162"/>
+                    <animations/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="162" id="R7g-N1-7tR"/>
+                        <constraint firstAttribute="width" constant="152" id="STL-F4-2aR"/>
+                    </constraints>
+                </pickerView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Temperature °F" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="McH-cb-vhP">
+                    <rect key="frame" x="241" y="58" width="134" height="21"/>
+                    <animations/>
+                    <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="17"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yN0-QG-rdS">
+                    <rect key="frame" x="265" y="266" width="87" height="42"/>
+                    <animations/>
+                    <fontDescription key="fontDescription" name="AmericanTypewriter-Bold" family="American Typewriter" pointSize="24"/>
+                    <state key="normal" title="Submit">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                </button>
+            </subviews>
+            <animations/>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="3hT-UB-HjS" firstAttribute="centerX" secondItem="McH-cb-vhP" secondAttribute="centerX" id="2Hc-hR-qmM"/>
+                <constraint firstItem="yN0-QG-rdS" firstAttribute="top" secondItem="3hT-UB-HjS" secondAttribute="bottom" constant="19" id="6um-Yh-Wai"/>
+                <constraint firstItem="3hT-UB-HjS" firstAttribute="top" secondItem="McH-cb-vhP" secondAttribute="bottom" constant="6" id="CHS-qK-5bd"/>
+                <constraint firstAttribute="centerX" secondItem="McH-cb-vhP" secondAttribute="centerX" constant="-8" id="Gl6-P9-ohn"/>
+                <constraint firstItem="yN0-QG-rdS" firstAttribute="centerX" secondItem="3hT-UB-HjS" secondAttribute="centerX" constant="0.5" id="caR-ai-yte"/>
+                <constraint firstAttribute="trailing" secondItem="Wba-xA-4Lb" secondAttribute="trailing" id="j4b-PQ-2da"/>
+                <constraint firstItem="Wba-xA-4Lb" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="sVF-Ja-Qko"/>
+                <constraint firstItem="McH-cb-vhP" firstAttribute="top" secondItem="Wba-xA-4Lb" secondAttribute="bottom" constant="14" id="ul6-NL-V8I"/>
+                <constraint firstItem="Wba-xA-4Lb" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="zcp-Gj-e2n"/>
+            </constraints>
+            <connections>
+                <outlet property="picker" destination="3hT-UB-HjS" id="gRw-uH-le1"/>
+            </connections>
+            <point key="canvasLocation" x="339" y="418"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="glyphicons-198-remove.png" width="26" height="26"/>
+    </resources>
+</document>
